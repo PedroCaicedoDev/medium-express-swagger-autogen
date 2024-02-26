@@ -1,0 +1,18 @@
+{
+  "name": "medium-express-swagger-autogen",
+  "version": "1.0.0",
+  "description": "Crea un API y documentala fácilmente con open api 3.0 usando swagger autogen",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Caicedo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "js-yaml": "^4.1.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0"
+  }
+}

@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Test API
+  description: It's a test API
+servers:
+  - url: http://localhost:3000
+    description: Local server
+tags:
+  - name: Documentation
+    description: It's a all documentation
+paths:
+  /docs/swagger/:
+    get:
+      tags:
+        - Documentation
+      summary: View documentation on ui, json or yaml/yml
+      description: View documentation on ui, json or yaml/yml
+      parameters:
+        - name: format
+          in: query
+          description: It is a swagger doc (default option is ui)
+          type: string
+          schema:
+            $ref: '#/components/schemas/Format'
+      responses:
+        '200':
+          description: Respond according to the selected format
+  /api/status/:
+    get:
+      tags:
+        - Status
+      summary: It is a keep alive endpoint
+      description: It is a keep alive endpoint
+      responses:
+        '200':
+          description: Respond according to the selected format
+components:
+  schemas:
+    Format:
+      type: string
+      enum:
+        - ui
+        - json
+        - yml
+        - yaml
