@@ -14,8 +14,8 @@ paths:
     get:
       tags:
         - Documentation
-      summary: View documentation on ui, json or yaml/yml
-      description: View documentation on ui, json or yaml/yml
+      summary: View documentation on HTML (ui), json or yaml/yml
+      description: View documentation on HTML (ui), json or yaml/yml
       parameters:
         - name: format
           in: query
